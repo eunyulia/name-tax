@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html dir="ltr"></html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Name-tax</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Language Switch -->
+    <div class="lang-wrapper">
+      <button class="lang-toggle">KR / EN</button>
+    </div>
+    <!-- 언어호환 메세지 -->
+  <script>
+      document.querySelector('.menu-toggle').addEventListener('click', () => {
+        document.querySelector('.lnb').classList.toggle('show');
+      });
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      document.querySelector('.lang-toggle').addEventListener('click', () => {
+        alert('언어 전환 기능은 추후 구현됩니다.');
+      });
+    </script>
+  
+    <!-- Top Logo (SVG) -->
+    <header class="title">
+      <img src="images/main_logo.svg" alt="이름값 로고" class="logo" />
+    </header>
+
+    <!-- Center Image (language-dependent) -->
+    <section class="main-image">
+      <img src="images/landing page-illust.svg" alt="The Name History (English)" class="lang-image" data-lang="en">
+      <img src="name-history-ko.png" alt="이름의 역사 (한글)" class="lang-image" data-lang="ko" style="display: none;">
+    </section>
+
+    <!-- Bottom Navigation Buttons (영문 고정, 버튼 모양 유지) -->
+    <nav class="bottom-nav">
+      <a href="1.0.0.work.html" class="nav-button">WORK</a>
+      <a href="2.0.0.design-lab.html" class="nav-button">DESIGN LAB</a>
+      <a href="3.0.0.shop.html" class="nav-button">SHOP</a>
+      <a href="4.0.0about-me.html" class="nav-button">ABOUT ME</a>
+    </nav>
+    
+  </div>
+
+  <!-- Language Switch Script -->
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
