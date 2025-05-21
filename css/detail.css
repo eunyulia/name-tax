@@ -1,0 +1,319 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+ /* 갤러리 레이아웃 */
+  .gallery {
+    margin: 2rem;
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    }
+
+    .gallery-item img {
+    width: 100%;
+    min-width: 1000px;
+    height: auto;
+    display: block;
+    }
+
+    .text-block{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    }
+
+    .divider1 {
+    color: #000000;
+    font-size: 1rem;
+    line-height: 1;
+    }
+
+    .text-explain {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;}
+
+    .text-block {
+    margin-bottom: 0rem; /* 태그와의 간격만 따로 제어 */
+    }
+
+    .text-block,
+    .tag {
+    padding: 0;
+    line-height: 1.2; /* 글씨가 겹치지 않게 */
+    }
+
+    .tag {
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    }
+
+    .gallery_about {
+    margin-top:2rem;
+    margin-bottom: 7rem;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    }
+
+    /* 반응형 처리 */
+    @media (max-width: 768px) {
+    .filter-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    }
+
+    .top-menu {
+    flex-direction: column;
+    align-items: flex-end;
+    }
+
+    .gallery {
+    padding: 1rem;
+    }}
+
+
+/* GNB */
+    .gnb {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-inline: 2rem;
+    padding: 0;  
+    }
+
+
+    /* 로고 */
+    .logo img {
+    display: block;
+    height: 50px;
+    margin: 0;
+    }
+
+    .logo{
+    margin-top: 2rem;
+    }
+
+  
+    /* filter tab */
+    .gnb .filter-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 5rem);
+    margin-top: 3.5rem;
+    margin-left: 50vw;  /* 화면 너비의 절반만큼 띄우기 */
+    transform: translateX(-80%); /* 정확히 가운데 정렬 (조정 가능) */
+    flex-wrap: nowrap;             /* 한 줄 유지 */
+    }
+
+    .gnb .filter-nav a {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+
+    padding: 0.4rem 1rem;        /* 내부 여백 추가 */
+    border-radius: 8px;          /* 둥근 모서리 */
+    display: inline-block;       /* padding 적용 위해 필요 */
+    transition: all 0.3s ease;}
+
+    /* 활성화 상태 스타일 */
+    .gnb .filter-nav a.active {
+    background-color: black;
+    color: #FFD700; /* 노란색 (Gold) */
+    border-radius: 5px;
+    }
+
+
+    /* home,menu,kr/en */
+    /* 텍스트 메뉴 우측 상단 고정 */
+    .text-menu {
+    position: absolute;
+    top: 1.3rem; /* 로고보다 위에 오도록 */
+    right: 0;
+
+
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem; /* 요소 간 여백 */
+    margin: 0;
+    padding: 0;}
+
+    .divider {
+    color: #4d4d4d;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-top: 0.1rem; /* 필요시 수직 정렬 보정 */
+    }
+
+    .lang-wrapper {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    }
+
+    .text-menu a,
+    .text-menu button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #4d4d4d;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+    margin: 0;
+    }
+
+
+/* footer */
+  .fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  height: 3rem;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  background-color: #f4d73d;
+  border-top: 1px solid #000000; /* 위쪽 선 */
+}
+
+.footer-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F4DD37;
+  padding: 0;
+  cursor: pointer;
+  border: none; /* 기본 보더 제거 */
+  outline: none;
+}
+
+/* 첫 번째 버튼 제외한 나머지에만 왼쪽 선 추가 */
+.footer-btn:not(:first-child) {
+  border-left: 1px solid #000;
+}
+
+.icon{
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+}
+  @media (max-width: 600px) {
+    .icon,
+    .icon-img {
+      font-size: 1rem;
+    }
+  }
+
+
+/* <*Lnb*> */
+  .lnb {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    padding: 0.5rem;
+    margin-top: 0;
+    overflow-y: auto;
+  }
+
+  .lnb.active {
+    transform: translateX(0);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
+
+  .close-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: black;
+    color:#ffffff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+  }
+
+     .lnb h2 {
+     background-color: #F4DD37;
+     padding: 0.7rem 0.9rem;
+     border: 1px solid black;
+     border-radius: 8px;
+     font-size: 0.8rem;
+     font-weight:500;
+     margin-top: 3rem;
+     margin-inline: 1.3rem;
+     }
+     .lnb ul {
+     list-style: none;
+     padding: 0;
+     margin: 0.5rem;
+     margin-inline: 1.3rem;
+     }
+
+     .lnb li {
+     margin: 0.5rem;
+     border-bottom: 1px solid #444;
+     }
+
+     .lnb a {
+     text-decoration: none;
+     color: #000000;
+     font-size: 0.8rem;
+     display: inline-block;
+     padding: 0.6rem;
+     }
+
+     .overlay {
+     display: none;
+     position: fixed;
+     top: 0; left: 0;
+     width: 100%; height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     z-index: 1000;
+     }
+
+     .overlay.show {
+     display: block;
+     }

@@ -1,0 +1,89 @@
+body {
+  background-color: #23C6FE; 
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 2rem;
+} 
+/* 영문전환 */
+.lang-wrapper {
+  position: absolute;
+  top: 1.3rem; /* 로고보다 위에 오도록 */
+  right: 2rem;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem; /* 요소 간 여백 */
+  margin: 0;
+  padding: 0;}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #4d4d4d;
+  cursor: pointer;
+  text-align: right;
+  text-decoration: none;
+  margin: 0;
+  }
+
+.lang-toggle.hover-level {
+  font-weight: 600;
+  }
+    
+/* 로고 */
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;  
+}
+/* 일러스트 */
+.main-image {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;  
+  transition: all 0.3s ease-in-out; 
+  justify-content: center;
+}
+.main-image img {
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+  
+/* 버튼 */
+ .bottom-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .nav-button {
+    padding: 0.75rem 2rem;
+    border: 1px solid black;
+    background-color: #F4DD37;
+    color: black;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    text-align: center;
+    min-width: 120px;
+    max-width: 200px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .nav-button:hover {
+    background-color: black;
+    color: #F4DD37;
+  }
+
+ 
